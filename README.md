@@ -13,8 +13,8 @@ If [available in Hex](https://hex.pm/docs/publish), the package can be installed
 ```elixir
 def deps do
   [
-    {:expassword, "~> 0.1"},
-    {:expassword_external_argon2, "~> 0.1", only: ~W[dev test]a},
+    {:expassword, "~> 0.2"},
+    {:expassword_external_argon2, "~> 0.2", only: ~W[dev test]a},
   ]
 end
 ```

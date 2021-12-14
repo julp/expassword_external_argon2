@@ -4,7 +4,7 @@ defmodule ExPassword.ExternalArgon2.MixProject do
   def project do
     [
       app: :expassword_external_argon2,
-      version: "0.1.0",
+      version: "0.2.0",
       elixir: "~> 1.6",
       elixirc_paths: elixirc_paths(Mix.env()),
       start_permanent: Mix.env() == :prod,
@@ -21,6 +21,7 @@ defmodule ExPassword.ExternalArgon2.MixProject do
   # Type `mix help compile.app` for more information.
   def application do
     [
+      mod: {ExPassword.ExternalArgon2.Application, []},
       extra_applications: ~W[logger runtime_tools]a,
     ]
   end
@@ -34,7 +35,7 @@ defmodule ExPassword.ExternalArgon2.MixProject do
   # Type `mix help deps` for examples and options.
   defp deps do
     [
-      {:expassword_algorithm, "~> 0.1"},
+      {:expassword, "~> 0.2"},
       {:earmark, "~> 1.4", only: :dev},
       {:ex_doc, "~> 0.22", only: :dev},
       #{:dialyxir, "~> 1.1", only: ~W[dev test]a, runtime: false},
